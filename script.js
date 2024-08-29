@@ -14,8 +14,23 @@ function moveSlide(n) {
 function autoSlide() {
     moveSlide(1);
     setTimeout(autoSlide, 5000); // Troca a cada 5 segundos
-}
+} 
 
 document.addEventListener('DOMContentLoaded', () => {
     autoSlide();
 });
+document.querySelector('.produtos-container').addEventListener('mousemove', function(e) {
+    const container = this;
+    const rect = container.getBoundingClientRect();
+    const mouseX = e.clientX - rect.left;
+
+    const width = container.clientWidth;
+    const scrollWidth = container.scrollWidth;
+
+    if (mouseX < width / 3) {
+        container.scrollLeft -= 10;
+    } else if (mouseX > (2 * width) / 3) {
+        container.scrollLeft += 10;
+    }
+});
+    
