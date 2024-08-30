@@ -278,7 +278,7 @@ header {
 }
 
 .comprar-btn:hover {
-    background-color: #7b8825; /* Cor do botão ao passar o mouse */
+    background-color: #9ca30d; /* Cor do botão ao passar o mouse */
 }
 
 /* Efeito de scroll suave */
@@ -292,4 +292,113 @@ header {
 
 .produtos-container:active .produtos {
     transform: translateX(-20px);
+}
+/* Contêiner dos Banners */
+.banners-retangulares {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Banner Retangular (Alinhado à Direita) */
+.banner-retangular {
+    flex: 1;
+    max-width: calc(100% / 9 * 8); /* Ocupa 8/9 da largura total */
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.banner-retangular img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+/* Banner Vazio (Alinhado à Esquerda) */
+.banner-vazio {
+    flex: 1;
+    max-width: calc(100% / 2); /* Ocupa 1/9 da largura total */
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.banner-vazio img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+/* Estilo das Seções de Produtos */
+.product-section {
+    padding: 40px 20px;
+    background-color: #f6f4eb;
+    border-top: 2px solid #e2a842;
+    margin-bottom: 40px;
+}
+
+.product-section h2 {
+    text-align: center;
+    color: #643e22;
+    background-color: #e2a842;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    flex: 1 1 calc(33.33% - 20px);
+    background-color: #fff;
+    border: 2px solid #d4dc25;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    border-bottom: 2px solid #f9ae41;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    color: #7b8825;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    color: #643e22;
+    margin-bottom: 15px;
+}
+
+.product-item .buy-button {
+    display: inline-block;
+    background-color: #808b1f;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product-item .buy-button:hover {
+    background-color: #6f7d1c;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    color: #777e2a;
 }
