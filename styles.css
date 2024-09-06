@@ -402,3 +402,224 @@ header {
     transform: scale(1.05);
     color: #777e2a;
 }
+.receitas {
+    margin-top: 40px;
+    padding: 20px;
+    background-image: url('img/banner-receitas.jpg'); /* Banner de fundo */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.receitas-header h2 {
+    font-size: 2em;
+    color: #643e22; /* Usar a paleta de cores */
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.receitas-slider {
+    display: flex;
+    justify-content: space-between; /* Distribuir as receitas uniformemente */
+    gap: 20px;
+    padding-bottom: 10px;
+    flex-wrap: wrap; /* Permitir que as receitas se ajustem em várias linhas, se necessário */
+    overflow: hidden; /* Remover scroll horizontal */
+}
+
+.receita-card {
+    flex: 1 1 calc(20% - 20px);
+    width: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.receita-card-inner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.receita-card:hover .receita-card-inner {
+    transform: rotateY(180deg);
+}
+
+.receita-card-front, .receita-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.receita-card-front {
+    background-color: #f6f4eb; /* Usar a paleta de cores */
+    color: #643e22;
+}
+
+.receita-card-front img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.receita-card-back {
+    background-color: #f6f4eb;
+    color: #643e22;
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.receita-info {
+    padding: 10px;
+}
+
+.newsletter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f4eb;
+    padding: 10px 0;
+}
+
+.newsletter-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 950px;
+    background-color: #f6f4eb;
+    padding: 0 20px;
+}
+
+.newsletter-content .logo-left,
+.newsletter-content .logo-right {
+    width: 150px;
+    height: auto;
+}
+
+.newsletter-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Espaço para dar distância das logos */
+}
+
+.newsletter-text {
+    text-align: center;
+    color: #643e22;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+    gap: 5px;
+}
+
+.input-group input {
+    padding: 8px;
+    border: 1px solid #643e22;
+    border-radius: 4px;
+    width: 220px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #7b8825;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #6a771f;
+}
+.footer {
+    background-color: #643e22; /* Cor do rodapé */
+    color: #f6f4eb;
+    padding: 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    max-width: 200px;
+    flex: 1;
+    text-align: left;
+}
+
+.footer-section h4 {
+    color: #d4dc25;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #f6f4eb;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-section a:hover {
+    color: #d4dc25;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #f6f4eb;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #d4dc25;
+}
+
+.footer-bottom {
+    background-color: #7b8825; /* Cor diferente para o rodapé final */
+    color: #f6f4eb;
+    padding: 10px 0;
+    font-size: 0.85em;
+    width: 100%;
+    position: relative;
+    left: 0;
+}
+
+
+
+
+
+
+
+

@@ -33,4 +33,12 @@ document.querySelector('.produtos-container').addEventListener('mousemove', func
         container.scrollLeft += 10;
     }
 });
-    
+
+// Exemplo de JavaScript para controle manual do scroll
+document.querySelector('.receitas-slider').addEventListener('wheel', (e) => {
+    if (e.deltaY > 0) {
+        e.target.scrollBy({left: 300, behavior: 'smooth'});
+    } else {
+        e.target.scrollBy({left: -300, behavior: 'smooth'});
+    }
+});
